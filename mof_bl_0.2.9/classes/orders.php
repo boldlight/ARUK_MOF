@@ -114,8 +114,10 @@ class Orders_List extends WP_List_Table {
 		$title = '<strong>' . sprintf('<a href="?page=%s&amp;action=%s&amp;order_id=%s">' . $item['name'] . '</a>', $_REQUEST['page'], 'edit', $item['id']) . '</strong>';
 		$actions = null;
 
-
+		/* REMOVED DUE TO INCOMPATIBILITY WITH PHPv8.2
 		return $title . $this->row_actions($actions);
+		*/
+		return $title;
 	}
 
 
