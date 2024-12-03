@@ -91,8 +91,12 @@ class Catalogue_List extends WP_List_Table {
 		$title = '<strong>' . sprintf('<a href="?page=%s&amp;action=%s&amp;item_id=%s">' . stripslashes($item['title']) . '</a>', $_REQUEST['page'], 'edit', $item['id']) . '</strong>';
 		$actions = null;
 
-
+		/*
+		// Chris - Removed due to PHP upgrade incompatibility 
 		return $title . $this->row_actions($actions);
+		*/
+
+		return $title;
 	}
 
 
